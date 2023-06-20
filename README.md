@@ -86,6 +86,7 @@ In order to run this project you need:
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
+
 👤 **Atif Zada**
 - GitHub: [@Atif-Zada](https://github.com/AtifZada)
 - LinkedIn: [@Atif-Zada](https://linkedin.com/in/AtifZada)
