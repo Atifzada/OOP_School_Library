@@ -1,4 +1,4 @@
-require_relative './Person.rb'
+require_relative './Person'
 
 class Student < Person
   def initialize(classroom)
