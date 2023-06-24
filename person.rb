@@ -1,10 +1,10 @@
-require_relative './nameable'
+require_relative 'nameable'
 
 class Person < Nameable
   attr_accessor :age, :name, :rentals
   attr_reader :id
 
-  def initialize(age, parent_permission: true, name: 'Unknown')
+  def initialize(age, name, parent_permission)
     super()
     @id = Random.rand(1..1000)
     @name = name
@@ -30,5 +30,5 @@ class Person < Nameable
   end
 end
 
-n1 = Person.new(1, 19, name: 'Atif')
+n1 = Person.new(19, 'Atif', true)
 puts n1.of_age?
