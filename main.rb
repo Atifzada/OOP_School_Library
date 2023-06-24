@@ -1,4 +1,4 @@
-require_relative './app'
+require_relative 'app'
 
 def menu(app)
   app.list_of_options
