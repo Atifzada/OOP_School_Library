@@ -4,8 +4,8 @@ require_relative './teacher'
 require_relative './rental'
 require_relative './book'
 
-class App 
-  def initialize 
+class App
+  def initialize
     @books = []
     @rentals = []
     @people = []
@@ -26,7 +26,7 @@ class App
              "Parent Permission: #{person.parent_permission}"
       end
     end
-  end  
+  end
 
   def teacher_creation
     print 'Enter Teacher name: '
@@ -47,21 +47,20 @@ class App
     age = gets.chomp.to_i
     print 'Allowed by parents? [Yes/No]: '
     parent_permission = gets.chomp.downcase
-  
+
     case parent_permission
     when 'yes'
-        student = Student.new(name, age, true)
+      student = Student.new(name, age, true)
       @people << student
     when 'no'
-        student = Student.new(name, age, false)
+      student = Student.new(name, age, false)
       @people << student
     else
       puts 'Invalid option, please reenter'
     end
-  
+
     puts 'Student successfully registered'
   end
-   
 
   def person_creation
     print 'If you want to register a new student, press 1. Press 2 to register a teacher: '
@@ -75,66 +74,66 @@ class App
     else
       puts 'You have entered an invalid number'
     end
-  end   
+  end
 
-    def book_creation
-        print 'Enter book name: '
-        title = gets.chomp
-        print 'Enter writter name: '
-        author = gets.chomp
-        book = Book.new(title, author)
-        @books << book
-        puts 'Book created successfully'
-    end    
-    
-    def rental_creation
-        puts 'Choose a book from the following list: '
-        @books.each_with_index { |book, index| puts "#{index}) Title: #{book.title}, Written_By: #{book.author}" }
-        selected_book = gets.chomp.to_i
-    
-        puts 'Choose a person from the following list:'
-        @people.each_with_index do |person, index|
-          puts "#{index}) ID: #{person.id} Name: #{person.name} Age: #{person.age} "
-        end
-        selected_person = gets.chomp.to_i
-    
-        puts 'Date: '
-        selected_date = gets.chomp.to_s
-    
-        rental = Rental.new(selected_date, @books[selected_book - 1], @people[selected_person])
-        @rentals << rental
-        puts 'Book is successfully rented.'
-      end
-    
-      def list_rentals_for_person(person_id)
-        person = @people.find { |p| p.id == person_id }
-    
-        if person.nil?
-          puts "Person with ID #{person_id} not found."
-          return
-        end
-    
-        rentals = @rentals.select { |rental| rental.person.id == person_id }
-    
-        puts "Rentals for person #{person.name}:"
-        rentals.each do |rental|
-          puts "Date: #{rental.date}, Book: #{rental.book.title}, Written_By: #{rental.book.author}"
-        end
-      end
-    
-      def invalid_option
-        puts 'Invalid option selected'
-      end
+  def book_creation
+    print 'Enter book name: '
+    title = gets.chomp
+    print 'Enter writter name: '
+    author = gets.chomp
+    book = Book.new(title, author)
+    @books << book
+    puts 'Book created successfully'
+  end
 
-      def List_of_options
-        puts 'OOP School Library!'
-        puts 'Please enter the concern number:'
-        puts '1 - List of books.'
-        puts '2 - List of people.'
-        puts '3 - Create a person (teacher / student).'
-        puts '4 - Create a book.'
-        puts '5 - Create a rental.'
-        puts '6 - List of rentals for a given person ID.'
-        puts '7 - Exit'
-      end
+  def rental_creation
+    puts 'Choose a book from the following list: '
+    @books.each_with_index { |book, index| puts "#{index}) Title: #{book.title}, Written_By: #{book.author}" }
+    selected_book = gets.chomp.to_i
+
+    puts 'Choose a person from the following list:'
+    @people.each_with_index do |person, index|
+      puts "#{index}) ID: #{person.id} Name: #{person.name} Age: #{person.age} "
+    end
+    selected_person = gets.chomp.to_i
+
+    puts 'Date: '
+    selected_date = gets.chomp.to_s
+
+    rental = Rental.new(selected_date, @books[selected_book - 1], @people[selected_person])
+    @rentals << rental
+    puts 'Book is successfully rented.'
+  end
+
+  def list_rentals_for_person(person_id)
+    person = @people.find { |p| p.id == person_id }
+
+    if person.nil?
+      puts "Person with ID #{person_id} not found."
+      return
+    end
+
+    rentals = @rentals.select { |rental| rental.person.id == person_id }
+
+    puts "Rentals for person #{person.name}:"
+    rentals.each do |rental|
+      puts "Date: #{rental.date}, Book: #{rental.book.title}, Written_By: #{rental.book.author}"
+    end
+  end
+
+  def invalid_option
+    puts 'Invalid option selected'
+  end
+
+  def list_of_options
+    puts 'OOP School Library!'
+    puts 'Please enter the concern number:'
+    puts '1 - List of books.'
+    puts '2 - List of people.'
+    puts '3 - Create a person (teacher / student).'
+    puts '4 - Create a book.'
+    puts '5 - Create a rental.'
+    puts '6 - List of rentals for a given person ID.'
+    puts '7 - Exit'
+  end
 end

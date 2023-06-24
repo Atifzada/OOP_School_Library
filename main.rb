@@ -1,7 +1,7 @@
 require_relative './app'
 
 def menu(app)
-  app.List_of_options
+  app.list_of_options
   print '>>'
   gets.chomp.to_i
 end
