@@ -104,11 +104,14 @@ To run the test change the file name for respective file
 - GitHub: [@skabeo](https://github.com/skabeo)
 - Twitter: [@black_okyere](https://twitter.com/black_okyere)
 - LinkedIn: [LinkedIn](https://linkedin.com/in/spencer-okyere)
-<!-- FUTURE FEATURES -->
+## 🔭 Future Features <a name="future-features"></a>
+
 Possible future features for this project include:
 
 - Add more methods to the `OOP library`
 - Enhance error handling and edge case scenarios
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
 
