@@ -91,6 +91,12 @@ In order to run this project you need:
 - GitHub: [@Atif-Zada](https://github.com/AtifZada)
 - LinkedIn: [@Atif-Zada](https://linkedin.com/in/AtifZada)
 
+
+👤 **Spencer Okyere**
+
+- GitHub: [@skabeo](https://github.com/skabeo)
+- Twitter: [@black_okyere](https://twitter.com/black_okyere)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/spencer-okyere)
 <!-- FUTURE FEATURES -->
 
 ## 🔭 Future Features <a name="future-features"></a>
