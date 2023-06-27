@@ -6,6 +6,7 @@ require_relative 'book'
 
 class App
   attr_accessor :books, :people, :rentals
+
   def initialize
     @books = []
     @rentals = []
@@ -101,7 +102,7 @@ class App
     print 'Date MM/DD/YYYY : '
     selected_date = gets.chomp.to_s
 
-    rented = Rental.new(selected_date, @books[selected_book-1], @people[selected_person])
+    rented = Rental.new(selected_date, @books[selected_book - 1], @people[selected_person])
     # rental = Rental.new(selected_date, @books[selected_book - 1], @people[selected_person])
     @rentals << rented
     puts 'Book is successfully rented.'
