@@ -5,6 +5,7 @@ require_relative 'rental'
 require_relative 'book'
 
 class App
+  attr_accessor :books, :people, :rentals
   def initialize
     @books = []
     @rentals = []
@@ -87,21 +88,22 @@ class App
   end
 
   def rental_creation
-    puts 'Choose a book from the following list: '
+    puts 'Choose an index # of a book from the following list: '
     @books.each_with_index { |book, index| puts "#{index}) Title: #{book.title}, Written_By: #{book.author}" }
     selected_book = gets.chomp.to_i
 
-    puts 'Choose a person from the following list:'
+    puts 'Choose an index # a person from the following list:'
     @people.each_with_index do |person, index|
       puts "#{index}) ID: #{person.id} Name: #{person.name} Age: #{person.age} "
     end
-    selected_person = gets.chomp.to_i
+    selected_person = Integer(gets.chomp)
 
-    puts 'Date: '
+    print 'Date MM/DD/YYYY : '
     selected_date = gets.chomp.to_s
 
-    rental = Rental.new(selected_date, @books[selected_book - 1], @people[selected_person])
-    @rentals << rental
+    rented = Rental.new(selected_date, @books[selected_book-1], @people[selected_person])
+    # rental = Rental.new(selected_date, @books[selected_book - 1], @people[selected_person])
+    @rentals << rented
     puts 'Book is successfully rented.'
   end
 
