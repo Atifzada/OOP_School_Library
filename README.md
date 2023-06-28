@@ -77,9 +77,16 @@ In order to run this project you need:
 -Command: install Ruby
 - [OFFICIAL](https://rubyinstaller.org/downloads/)
 
+### Run tests
 
-### Run test
--Command: Run through IRB / Vs Code
+To run the test change the file name for respective file
+
+```
+ ruby -S rspec spec/book_spec.rb
+ ruby -S rspec spec/classroom_spec.rb
+ ruby -S rspec spec/decorator_spec.rb
+ ruby -S rspec spec/person_spec.rb
+```
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -91,11 +98,19 @@ In order to run this project you need:
 - GitHub: [@Atif-Zada](https://github.com/AtifZada)
 - LinkedIn: [@Atif-Zada](https://linkedin.com/in/AtifZada)
 
-<!-- FUTURE FEATURES -->
 
+👤 **Spencer Okyere**
+
+- GitHub: [@skabeo](https://github.com/skabeo)
+- Twitter: [@black_okyere](https://twitter.com/black_okyere)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/spencer-okyere)
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Advance Features ]**
+Possible future features for this project include:
+
+- Add more methods to the `OOP library`
+- Enhance error handling and edge case scenarios
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- CONTRIBUTING -->
