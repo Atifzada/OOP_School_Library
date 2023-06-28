@@ -11,5 +11,4 @@ describe Student do
   it 'can play hooky' do
     expect(student.play_hooky).to eq('¯(ツ)/¯')
   end
-  
 end
